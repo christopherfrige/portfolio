@@ -1,3 +1,4 @@
+// Função genérica para inicializar o listener no elemento com determinado nome de classe
 function clickExperienceListener(experienceClassName) {
     document.querySelector(`.${experienceClassName}`).addEventListener("click", () => {
         document.querySelector(`.activeExperienceDescription`).classList.remove("activeExperienceDescription")
@@ -8,6 +9,7 @@ function clickExperienceListener(experienceClassName) {
     })
 }
 
+// Inicializa os listeners de cliques nos botões de experiência profissional
 export function startClickExperienceListeners() {
     clickExperienceListener("exa")
     clickExperienceListener("zax")

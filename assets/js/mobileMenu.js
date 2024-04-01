@@ -1,3 +1,4 @@
+// Função para configurar o menu para dispositivos móveis em determinados tamanhos de tela
 export function setupMobileMenu() {
     class MobileNavbar {
       constructor(mobileMenu, navList, navLinks, navLinks2) {

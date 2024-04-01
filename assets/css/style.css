@@ -1,3 +1,4 @@
+/* Estilizações gerais */
 @font-face {
   font-family: Chivo;
   src: url("../fonts/Chivo-Regular.ttf");
@@ -64,6 +65,27 @@ html {
   background-color: #5876ff;
   border-radius: 8px;
 }
+.progressivewriting:after {
+  content: "|";
+  margin-left: 8px;
+  opacity: 1;
+  animation: blink 1s infinite;
+  color: #5876ff;
+}
+@keyframes blink {
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.grid-layout {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho de navegação */
 header {
   padding: 0px 50px;
   background: #111;
@@ -128,6 +150,17 @@ header .grid-layout nav .nav-list li a:hover::after {
 header .grid-layout nav .nav-list li a:hover {
   color: #fff;
 }
+.nav-name {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.nav-name:hover {
+  color: #5876ff;
+}
+
+/* Menu mobile */
 .mobile-menu {
   display: none;
 }
@@ -189,6 +222,8 @@ header .grid-layout nav .nav-list li a:hover {
     display: block;
   }
 }
+
+/* Seção inicial */
 #s-home {
   padding: 0px 50px;
   background-color: #111;
@@ -279,6 +314,8 @@ header .grid-layout nav .nav-list li a:hover {
     display: none;
   }
 }
+
+/* Seção "quem sou eu" */
 #about {
   padding: 72px 0px;
   background-color: #111;
@@ -298,6 +335,63 @@ header .grid-layout nav .nav-list li a:hover {
   align-items: center;
   height: auto;
 }
+.whoami {
+  display: block !important;
+}
+.whoami h4 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #5876ff;
+}
+.whoami h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  margin: 16px 0px;
+  color: #fff;
+}
+@media screen and (max-width: 992px) {
+  .whoami h2 {
+    font-size: 3.2rem;
+  }
+}
+.whoami h3 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 16px;
+  color: #fff;
+}
+.whoami p {
+  font-size: 1.8rem;
+  color: #9ca3af;
+  line-height: 160%;
+  margin: 32px 0px 48px 0px;
+}
+.whoami nav ul {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@media screen and (max-width: 1200px) {
+  .whoami nav ul {
+    flex-wrap: wrap;
+  }
+}
+.whoami nav ul a {
+  background-color: #111;
+  border: 2px solid #1f1f1f;
+  border-radius: 6px;
+  padding: 16px;
+}
+@media screen and (max-width: 1200px) {
+  .whoami nav ul a img {
+    width: 40px;
+  }
+}
+.whoami nav ul a:hover {
+  border-color: #5876ff;
+}
+
+/* Seção de formação/experiências */
 #experience {
   background-color: #151515;
   color: #fff;
@@ -396,6 +490,11 @@ header .grid-layout nav .nav-list li a:hover {
   color: #9ca3af;
   font-weight: 400;
 }
+.activeExperienceDescription {
+  display: block !important;
+}
+
+/* Seção de portfólio/projetos */
 #portfolio {
   padding: 96px 48px;
   text-align: center;
@@ -424,10 +523,10 @@ header .grid-layout nav .nav-list li a:hover {
   text-align: left;
 }
 .manwhareader {
-  border: 1px solid #d4ba25!important;
+  border: 1px solid #d4ba25 !important;
 }
 .manwhareader:hover {
-  border: 1px solid #d4ba25!important;
+  border: 1px solid #d4ba25 !important;
 }
 #portfolio .grid-layout #projects > article {
   height: auto;
@@ -466,10 +565,10 @@ header .grid-layout nav .nav-list li a:hover {
   font-size: 1.8rem;
 }
 #manwhareader {
-  color: #d4ba25!important;
+  color: #d4ba25 !important;
 }
 #manwhareader::after {
-  background: linear-gradient(270deg, #d4ba25 0%, #17161d 100%)!important;
+  background: linear-gradient(270deg, #d4ba25 0%, #17161d 100%) !important;
 }
 #portfolio .grid-layout a {
   color: #5876ff;
@@ -508,6 +607,7 @@ header .grid-layout nav .nav-list li a:hover {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+/* Seção de contato */
 #contact {
   padding: 96px 48px;
   background-color: #151515;
@@ -575,6 +675,34 @@ header .grid-layout nav .nav-list li a:hover {
   color: #9ca3af;
   font-size: 1.8rem;
 }
+.contact-form {
+  display: inline-grid;
+  color: #fff;
+  margin: 0 auto 20px auto;
+  font-size: 18px;
+  width: 400px;
+}
+label {
+  margin: 10px 0 0 0;
+}
+input[type="text"],
+textarea {
+  font-size: 16px;
+  padding: 5px;
+  background-color: #b8b9c2;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+#contact-form-send {
+  margin-top: 10px;
+  width: 60px;
+  padding: 5px;
+}
+#contact-form-send:hover {
+  cursor: pointer;
+}
+
+/* Rodapé */
 footer {
   width: 100%;
   height: auto;
@@ -613,119 +741,4 @@ footer div {
   footer .grid-layout div {
     display: none;
   }
-}
-.typewriter:after {
-  content: "|";
-  margin-left: 8px;
-  opacity: 1;
-  animation: blink 1s infinite;
-  color: #5876ff;
-}
-@keyframes blink {
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-.grid-layout {
-  max-width: 1140px;
-  margin: 0 auto;
-}
-.text-experience {
-  display: none;
-}
-.whoami {
-  display: block !important;
-}
-.nav-name {
-  color: #fff;
-  font-size: 30px;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-.nav-name:hover {
-  color: #5876ff;
-}
-.contact-form {
-  display: inline-grid;
-  color: #fff;
-  margin: 0 auto 20px auto;
-  font-size: 18px;
-  width: 400px;
-}
-label {
-  margin: 10px 0 0 0;
-}
-input[type="text"],
-textarea {
-  font-size: 16px;
-  padding: 5px;
-  background-color: #b8b9c2;
-  border: 2px solid #000;
-  border-radius: 5px;
-}
-#contact-form-send {
-  margin-top: 10px;
-  width: 60px;
-  padding: 5px;
-}
-#contact-form-send:hover {
-  cursor: pointer;
-}
-.activeExperienceDescription {
-  display: block !important;
-}
-.whoami h4 {
-  font-size: 3rem;
-  font-weight: 500;
-  color: #5876ff;
-}
-.whoami h2 {
-  font-size: 4rem;
-  font-weight: 500;
-  margin: 16px 0px;
-  color: #fff;
-}
-@media screen and (max-width: 992px) {
-  .whoami h2 {
-    font-size: 3.2rem;
-  }
-}
-.whoami h3 {
-  font-size: 1.8rem;
-  font-weight: 300;
-  margin-bottom: 16px;
-  color: #fff;
-}
-.whoami p {
-  font-size: 1.8rem;
-  color: #9ca3af;
-  line-height: 160%;
-  margin: 32px 0px 48px 0px;
-}
-.whoami nav ul {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-@media screen and (max-width: 1200px) {
-  .whoami nav ul {
-    flex-wrap: wrap;
-  }
-}
-.whoami nav ul a {
-  background-color: #111;
-  border: 2px solid #1f1f1f;
-  border-radius: 6px;
-  padding: 16px;
-}
-@media screen and (max-width: 1200px) {
-  .whoami nav ul a img {
-    width: 40px;
-  }
-}
-.whoami nav ul a:hover {
-  border-color: #5876ff;
 }

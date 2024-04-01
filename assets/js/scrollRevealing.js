@@ -1,3 +1,4 @@
+// Inicialização de classes para scroll revealing a serem utilizadas no HTML
 export function startScrollRevealing () {
     const sr = ScrollReveal({
       origin: "top",
