@@ -316,8 +316,8 @@ header .grid-layout nav .nav-list li a:hover {
 }
 
 #presentation-img {
-  height: auto;
-  width: 30%;
+  height: auto!important;
+  width: 30%!important;
 }
 @media screen and (max-width: 1200px) {
   #presentation-img {
