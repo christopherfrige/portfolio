@@ -1,14 +1,14 @@
 /* Estilizações gerais */
 @font-face {
-  font-family: Chivo;
-  src: url("../fonts/Chivo-Regular.ttf");
+  font-family: Archivo;
+  src: url("../fonts/Archivo-Regular.ttf");
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Chivo";
+  font-family: "Archivo";
 }
 ::selection {
   background-color: #5876ff;
@@ -40,14 +40,14 @@ h6 {
 button,
 input {
   border: 0;
-  font-family: "Chivo";
+  font-family: "Archivo";
 }
 button:focus,
 input:focus {
   border: 0;
 }
 body {
-  font-family: "Chivo";
+  font-family: "Archivo";
   background-color: #fff;
   overflow-x: hidden;
 }
@@ -263,7 +263,7 @@ header .grid-layout nav .nav-list li a:hover {
 }
 #home #home-container-text h1 {
   color: #fff;
-  max-width: 650px;
+  max-width: 700px;
   line-height: 140%;
   font-size: 4rem;
   font-weight: 500;
@@ -311,6 +311,16 @@ header .grid-layout nav .nav-list li a:hover {
 }
 @media screen and (max-width: 1200px) {
   #home #logo {
+    display: none;
+  }
+}
+
+#presentation-img {
+  height: auto;
+  width: 30%;
+}
+@media screen and (max-width: 1200px) {
+  #presentation-img {
     display: none;
   }
 }
@@ -608,106 +618,12 @@ header .grid-layout nav .nav-list li a:hover {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-/* Seção de contato */
-#contact {
-  padding: 96px 48px;
-  background-color: #151515;
-}
-@media screen and (max-width: 992px) {
-  #contact {
-    padding: 48px 24px;
-  }
-}
-#contact .grid-layout h2 {
-  text-align: center;
-  padding-bottom: 24px;
-  color: #fff;
-  font-size: 4rem;
-  font-weight: 500;
-}
-#contact .grid-layout h2 span {
-  color: #5876ff;
-}
-#contact-content {
-  display: flex;
-  height: auto;
-  flex-wrap: wrap;
-  margin: 24px 0px;
-}
-#contact-content article {
-  background-color: #111;
-  height: auto;
-  padding: 32px;
-  margin: 8px;
-  flex-basis: calc(33% - 20px);
-  flex-grow: 1;
-  border: 1px solid #111;
-  transition: 1s all ease;
-  border: 1px solid #1f1f1f;
-  border-radius: 4px;
-}
-#contact-content article:hover {
-  border: 1px solid #5876ff;
-}
-@media screen and (max-width: 1200px) {
-  #contact-content article {
-    flex-basis: calc(50% - 20px);
-  }
-}
-@media screen and (max-width: 768px) {
-  #contact-content article {
-    flex-basis: calc(100% - 20px);
-  }
-}
-#contact-content article div {
-  height: 90px;
-}
-#contact-content article div img {
-  width: 70px;
-}
-#contact-content article h3 {
-  padding: 24px 0px;
-  color: #fff;
-  font-size: 2.4rem;
-  font-weight: 500;
-}
-#contact-content article p {
-  line-height: 3.2rem;
-  color: #9ca3af;
-  font-size: 1.8rem;
-}
-.contact-form {
-  display: inline-grid;
-  color: #fff;
-  margin: 0 auto 20px auto;
-  font-size: 18px;
-  width: 400px;
-}
-label {
-  margin: 10px 0 0 0;
-}
-input[type="text"],
-textarea {
-  font-size: 16px;
-  padding: 5px;
-  background-color: #b8b9c2;
-  border: 2px solid #000;
-  border-radius: 5px;
-}
-#contact-form-send {
-  margin-top: 10px;
-  width: 60px;
-  padding: 5px;
-}
-#contact-form-send:hover {
-  cursor: pointer;
-}
 
 /* Rodapé */
 footer {
   width: 100%;
   height: auto;
-  background-color: #111;
+  background-color: #151515;
   color: #fff;
   padding: 24px 0px;
 }
