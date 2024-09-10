@@ -11,6 +11,7 @@ function clickExperienceListener(experienceClassName) {
 
 // Inicializa os listeners de cliques nos botões de experiência profissional
 export function startClickExperienceListeners() {
+    clickExperienceListener("neogrid")
     clickExperienceListener("exa")
     clickExperienceListener("zax")
     clickExperienceListener("datainfo")
