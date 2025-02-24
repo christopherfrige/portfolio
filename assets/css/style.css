@@ -690,7 +690,7 @@ input[type="checkbox"] {
   top: 2px;
   left: 5px;
   border-radius: 50%;
-  transition: 0.3s ease left, 0.3s ease background-color;
+  transition: 0.2s ease left;
   background-image: url(https://m.media-amazon.com/images/I/61dHFpZmRSL._AC_UF1000,1000_QL80_.jpg);
   background-size: cover;
   background-position: center;
@@ -706,10 +706,4 @@ input[type="checkbox"] {
   left: 30px;
   background-color: #ffffff;
   background-image: url(https://seekflag.com/wp-content/uploads/2021/11/Flag-of-Brazil-01-1.svg);
-}
-
-#language-toggle:checked + #button #language-text {
-  color: #ffffff;
-  left: 20px;
-  transition: left 0.4s ease;
 }
