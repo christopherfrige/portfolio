@@ -194,6 +194,9 @@ header .grid-layout nav .nav-list li a:hover {
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -5px);
 }
+.nav-list {
+  align-items: center;
+}
 @media screen and (max-width: 992px) {
   body {
     overflow-x: hidden;
@@ -533,10 +536,10 @@ header .grid-layout nav .nav-list li a:hover {
   flex-wrap: wrap;
   text-align: left;
 }
-.manwhareader {
+.project1-card {
   border: 1px solid #d4ba25 !important;
 }
-.manwhareader:hover {
+.project1-card:hover {
   border: 1px solid #d4ba25 !important;
 }
 #portfolio .grid-layout #projects > article {
@@ -575,10 +578,10 @@ header .grid-layout nav .nav-list li a:hover {
   line-height: 3.2rem;
   font-size: 1.8rem;
 }
-#manwhareader {
+#project1-link {
   color: #d4ba25 !important;
 }
-#manwhareader::after {
+#project1-link::after {
   background: linear-gradient(270deg, #d4ba25 0%, #17161d 100%) !important;
 }
 #portfolio .grid-layout a {
@@ -658,4 +661,55 @@ footer div {
   footer .grid-layout div {
     display: none;
   }
+}
+
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Switch language button */
+#button {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 31px;
+  background-color: #202020;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 20px auto;
+  transition: background-color 0.3s ease;
+  box-shadow: 3px 3px 5px;
+}
+
+#flag {
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  border-radius: 50%;
+  transition: 0.3s ease left, 0.3s ease background-color;
+  background-image: url(https://m.media-amazon.com/images/I/61dHFpZmRSL._AC_UF1000,1000_QL80_.jpg);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid black;
+  box-shadow: 0 0 5px;
+}
+
+#language-toggle:checked + #button {
+  background-color: #202020;
+}
+
+#language-toggle:checked + #button #flag {
+  left: 30px;
+  background-color: #ffffff;
+  background-image: url(https://seekflag.com/wp-content/uploads/2021/11/Flag-of-Brazil-01-1.svg);
+}
+
+#language-toggle:checked + #button #language-text {
+  color: #ffffff;
+  left: 20px;
+  transition: left 0.4s ease;
 }

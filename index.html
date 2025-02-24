@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="shortcut icon" href="assets/icons/favicon.svg" type="image/x-icon" />
 
-  <title>Christopher Frige - Portfólio</title>
+  <title>Christopher Frige - Portfolio</title>
 </head>
 
 <body>
@@ -20,71 +20,61 @@
   <header>
     <div class="grid-layout">
       <nav>
-        <a href="https://christopherfrige.com" class="nav-name">Christopher Frige</a>
+        <a href="#home" class="nav-name">Christopher Frige</a>
         <div class="mobile-menu">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-          <li><a href="#about">Sobre mim</a></li>
-          <li><a href="#experience">Experiências</a></li>
-          <li><a href="#portfolio">Projetos</a></li>
+          <li><a href="#about" id="nav-about"></a></li>
+          <li><a href="#experience" id="nav-experience"></a></li>
+          <li><a href="#portfolio" id="nav-projects"></a></li>
+          <li>
+            <input type="checkbox" id="language-toggle">
+            <label id="button" for="language-toggle">
+                <div id="flag"></div>
+            </label>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Conteúdo -->
+  <!-- Content -->
   <main>
-    <!-- Início -->
+    <!-- Home -->
     <section id="s-home">
       <div class="grid-layout">
         <div id="home">
           <div id="home-container-text">
-            <h1 class="delayMediumReveal">
-              Excelência em construção de soluções <span>robustas</span>, <span>escaláveis</span>
-              e <span>monitoráveis</span>.
-            </h1>
-            <p class="progressivewriting">
-              Arquitetura, desenvolvimento e implantação com alta qualidade.
-            </p>
+            <h1 class="delayMediumReveal" id="profile-title"></h1>
+            <p class="progressivewriting" id="profile-subtitle"></p>
 
-            <a href="#portfolio" class="delaySmallReveal">
-              Veja meus projetos
-            </a>
+            <a href="#portfolio" class="delayMediumReveal" id="cta"></a>
           </div>
-          <img id="presentation-img" class="delaySmallReveal" src="./assets/icons/presentation.svg" alt="Ícone do GitHub" />
+          <img id="presentation-img" class="delaySmallReveal" src="./assets/icons/presentation.svg" />
         </div>
       </div>
     </section>
 
-    <!-- Sobre mim -->
+    <!-- About -->
     <section id="about">
       <div class="grid-layout">
         <div class="whoami">
-          <h4 class="delayMediumReveal">Quem sou eu</h4> <br />
+          <h4 class="delayMediumReveal" id="whoami"></h4> <br />
           <h2 class="delaySmallReveal">Christopher Frige</h2>
-          <h3 class="delayMediumReveal">
-            Desenvolvedor Backend
-          </h3>
-
-          <p class="delayLargeReveal">
-            Me chamo Christopher Frige e sou um desenvolvedor de software com
-            sólido conhecimento na área de tecnologia. Minha jornada profissional
-            abrange a aplicação de diversas linguagens de programação,
-            frameworks e serviços em nuvem.
-          </p>
+          <h3 class="delayMediumReveal" id="whoami-title"></h3>
+          <p class="delayLargeReveal" id="whoami-description"></p>
           <nav class="delayLargeReveal">
             <ul>
               <a href="https://www.linkedin.com/in/christopherfrige/" rel="noopener" target="_blank">
                 <li>
-                  <img src="./assets/icons/linkedin.svg" rel="noopener" alt="Ícone do LinkedIn" />
+                  <img src="./assets/icons/linkedin.svg" rel="noopener" alt="LinkedIn's Icon" />
                 </li>
               </a>
               <a href="https://github.com/christopherfrige" rel="noopener" target="_blank">
                 <li>
-                  <img src="./assets/icons/github.svg" alt="Ícone do GitHub" />
+                  <img src="./assets/icons/github.svg" alt="GitHub's Icon" />
                 </li>
               </a>
             </ul>
@@ -93,10 +83,10 @@
       </div>
     </section>
 
-    <!-- Experiências -->
+    <!-- Experience -->
     <section id="experience">
       <div class="grid-layout">
-        <h2 class="delaySmallReveal">Experiências</h2>
+        <h2 class="delaySmallReveal" id="experience-title"></h2>
         <div id="experience-content">
           <div class="option-experience intervalCardReveal" id="experience-company">
             <div class="company neogrid activeExperience">
@@ -117,118 +107,82 @@
           </div>
           <div class="text-experience neogrid-description intervalCardReveal activeExperienceDescription">
             <div>
-              <h4 class="titleExperience">
-                Desenvolvedor Backend Sênior
-              </h4>
-              <p class="dateExperience">Mai 2024 - Atualmente</p>
+              <h4 class="titleExperience" id="neogrid-job-title"></h4>
+              <p class="dateExperience" id="neogrid-job-duration"></p>
             </div>
             <h5>Neogrid</h5>
-            <p>
-              Arquitetura e desenvolvimento do backend de aplicações web, criação de microsserviços, 
-              integrações com APIs, modelagem de banco de dados, containerização de aplicações, 
-              desenvolvimento de testes automatizados (unitários e de integração).
-            </p>
+            <p id="neogrid-job-description"></p>
           </div>
           <div class="text-experience exa-description">
             <div>
-              <h4 class="titleExperience">
-                Desenvolvedor Backend
-              </h4>
-              <p class="dateExperience">Dez 2022 - Mai 2024 (1 ano e 5 meses)</p>
+              <h4 class="titleExperience" id="exa-job-title"></h4>
+              <p class="dateExperience" id="exa-job-duration"></p>
             </div>
             <h5>EXA</h5>
-            <p>
-              Arquitetura e desenvolvimento do backend de aplicações mobile e web,
-              criação de microsserviços, integrações com APIs externas de parceiros
-              e operadoras de telefonia, modelagem de banco de dados, containerização
-              de aplicações e construção de pipelines CI/CD.
-            </p>
+            <p id="exa-job-description"></p>
           </div>
           <div class="text-experience zax-description">
             <div>
-              <h4 class="titleExperience">
-                Desenvolvedor Backend
-              </h4>
-              <p class="dateExperience">Out 2021 - Nov 2022 (1 ano e 2 meses)</p>
+              <h4 class="titleExperience" id="zax-job-title"></h4>
+              <p class="dateExperience" id="zax-job-duration"></p>
             </div>
             <h5>ZAX</h5>
-            <p>
-              Construção de integrações com parceiros, desenvolvimento web,
-              desenvolvimento de cronjobs para gerenciamento de dados,
-              containerização de aplicações e criação de microsserviços.
-            </p>
+            <p id="zax-job-description"></p>
           </div>
           <div class="text-experience datainfo-description">
             <div>
-              <h4 class="titleExperience">
-                Desenvolvedor Backend
-              </h4>
-              <p class="dateExperience">Mar 2021 - Set 2022 (7 meses)</p>
+              <h4 class="titleExperience" id="datainfo-job-title"></h4>
+              <p class="dateExperience" id="datainfo-job-duration"></p>
             </div>
             <h5>Datainfo</h5>
-            <p>
-              Desenvolvimento de aplicações e análise de dados na
-              Equipe Queimadas do INPE - Instituto Nacional de Pesquisas Espaciais.
+            <p id="datainfo-job-description">
+              
             </p>
           </div>
           <div class="text-experience trackcash-description">
             <div>
-              <h4 class="titleExperience">
-                Desenvolvedor Backend
-              </h4>
-              <p class="dateExperience">Ago 2020 - Fev 2021 (7 meses)</p>
+              <h4 class="titleExperience" id="trackcash-job-title"></h4>
+              <p class="dateExperience" id="trackcash-job-duration"></p>
             </div>
             <h5>TrackCash</h5>
-            <p>
-              Desenvolvimento de integrações com parceiros e rotinas para tratamento de dados.
-            </p>
+            <p id="trackcash-job-description"></p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projetos -->
+    <!-- Projects -->
     <section id="portfolio">
       <div class="grid-layout">
-        <h2 class="delaySmallReveal">Projetos</h2>
+        <h2 class="delaySmallReveal" id="projects"></h2>
         <div id="projects">
-          <article class="delaySmallReveal manwhareader">
-            <h3>Manwha Reader</h3>
-            <p>
-              Leitor web de graphic novels coreanas, com backend
-              em Python (FastAPI) e frontend em Vue.js/Nuxt.js.
-            </p>
-
-            <a href="https://manwhareader.christopherfrige.com" rel="noopener" target="_blank"
-              id="manwhareader">Visualizar projeto
-            </a>
+          <article class="delaySmallReveal project1-card">
+            <h3 id="project1-title"></h3>
+            <p id="project1-description"></p>
+            <a href="https://manwhareader.christopherfrige.com" rel="noopener" target="_blank" id="project1-link"></a>
           </article>
 
           <article class="delaySmallReveal">
-            <h3>Em breve...</h3>
-            <p>
-              Vá pegar algo para beber e relaxe, logo teremos um novo projeto aqui.
-            </p>
+            <h3 id="project2-title"></h3>
+            <p id="project2-description"></p>
           </article>
 
           <article class="delaySmallReveal">
-            <h3>Em breve...</h3>
-            <p>
-              Vá pegar algo para beber e relaxe, logo teremos um novo projeto aqui.
-            </p>
+            <h3 id="project3-title"></h3>
+            <p id="project3-description"></p>
           </article>
         </div>
         <a href="https://github.com/christopherfrige?tab=repositories" rel="noopener" target="_blank"
-          class="delayExtraBigReveal">Repositórios no GitHub</a>
+          class="delayExtraBigReveal" id="projects-repositories"></a>
       </div>
     </section>
   </main>
 
-  <!-- Rodapé -->
+  <!-- Footer -->
   <footer>
     <div class="grid-layout">
       <p>
-        Copyright © 2024
+        Copyright © 2025 - 
         <a href="https://christopherfrige.com" rel="noopener" target="_blank">
           christopherfrige.com
         </a>
@@ -236,7 +190,7 @@
     </div>
   </footer>
 
-  <!-- Importações de scripts js -->
+  <!-- Js scripts imports -->
   <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
   <script type="module" src="assets/js/main.js"></script>
 </body>

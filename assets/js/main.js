@@ -2,11 +2,10 @@ import { startProgressiveWriting } from "./progressiveWriting.js"
 import { setupMobileMenu } from "./mobileMenu.js"
 import { startScrollRevealing } from "./scrollRevealing.js";
 import { startClickExperienceListeners } from "./changeExperience.js";
-import { startContactForm } from "./contactForm.js";
+import { startSwitchLanguage } from "./switchLanguage.js"
 
-// Inicializando e configurando reatividade e responsividade na página
+startSwitchLanguage()
 setupMobileMenu()
 startScrollRevealing()
 startProgressiveWriting()
 startClickExperienceListeners()
-startContactForm()
